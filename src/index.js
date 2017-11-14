@@ -2,10 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import registerServiceWorker from './registerServiceWorker';
+import App from './app';
+import './reset.css';
+import './app.css';
 
 
 ReactDOM.render(
-  <div/>,
+  <App/>,
   document.getElementById('root')
 );
 
