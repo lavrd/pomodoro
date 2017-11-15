@@ -23,13 +23,13 @@ class App extends React.Component {
   render() {
 
     return (
-      <div>
+      <section>
         <Header switch={this.switchSettings} state={this.state.state}/>
 
         {
           this.state.state === statesApp.timer ? <Timer/> : <Settings/>
         }
-      </div>
+      </section>
     )
   }
 }

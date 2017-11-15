@@ -68,17 +68,17 @@ class Timer extends React.Component {
   render() {
 
     return (
-      <div>
-        <div className='container'>
+      <section>
+        <div className='container m-150'>
           <span className='display'>{this.state.min}:{this.state.sec}</span>
         </div>
 
         <div className='container'>
-          <img src={'/img/play.svg'} alt='play btn' onClick={(e) => this.start(e)}/>
-          <img src={'/img/pause.svg'} alt='play btn' onClick={(e) => this.pause(e)}/>
-          <img src={'/img/square.svg'} alt='play btn' onClick={(e) => this.stop(e)}/>
+          <img src={'/img/play.svg'} alt='play btn' className='item' onClick={(e) => this.start(e)}/>
+          <img src={'/img/pause.svg'} alt='pause btn' className='item' onClick={(e) => this.pause(e)}/>
+          <img src={'/img/square.svg'} alt='square btn' className='item' onClick={(e) => this.stop(e)}/>
         </div>
-      </div>
+      </section>
     )
   }
 }

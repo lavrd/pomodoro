@@ -22,13 +22,15 @@ const Header = (props) => {
   };
 
   return (
-    <div>
+    <section>
       <div className='progress-bar'/>
 
       <div className='container btn-settings'>
-        <img src={'/img/settings.svg'} alt='play btn' onClick={(e) => this.switchSettings(e)}/>
+        <img src={'/img/github.svg'} alt='github btn' onClick={() => console.log('github')}/>
+        <img src={'/img/bell.svg'} alt='bell btn' onClick={() => console.log('bell')}/>
+        <img src={'/img/settings.svg'} alt='settings btn' onClick={(e) => this.switchSettings(e)}/>
       </div>
-    </div>
+    </section>
   )
 };
 
