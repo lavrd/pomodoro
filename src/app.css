@@ -14,17 +14,25 @@ body {
 
 img {
   height: 25px;
+
   cursor: pointer;
 }
 
 .display {
   margin-top: 150px;
+
   font-size: 7rem;
 }
 
 .progress-bar {
-  background-color: #373737;
+  background-color: #DCD0C0;
 
   width: 40%;
-  height: 2px;
+  height: 3px;
+}
+
+.btn-settings {
+  justify-content: flex-end;
+
+  margin: 22px 25px 0 0;
 }
