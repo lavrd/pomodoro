@@ -9,7 +9,7 @@ class Timer extends React.Component {
     super();
 
     this.state = {
-      distance: 1499, // sec, 25m
+      distance: 1499,
       min: '25',
       sec: '00',
       state: statesTimer.stopped,
@@ -68,16 +68,29 @@ class Timer extends React.Component {
   render() {
 
     return (
-      <section>
-        <div className='container m-150'>
+      <section className='hero'>
+        <div className='row'>
           <span className='display'>{this.state.min}:{this.state.sec}</span>
         </div>
 
-        <div className='container'>
-          <img src={'/img/play.svg'} alt='play btn' className='item' onClick={(e) => this.start(e)}/>
-          <img src={'/img/pause.svg'} alt='pause btn' className='item' onClick={(e) => this.pause(e)}/>
-          <img src={'/img/square.svg'} alt='square btn' className='item' onClick={(e) => this.stop(e)}/>
-        </div>
+        {
+          this.state.state === statesTimer.stopped ?
+
+            <div className='row'>
+              <img src={'/img/play.svg'} alt='play btn' className='item' onClick={(e) => this.start(e)}/>
+            </div> :
+
+            this.state.state === statesTimer.paused ?
+              <div className='row'>
+                <img src={'/img/play.svg'} alt='play btn' className='item' onClick={(e) => this.start(e)}/>
+                <img src={'/img/square.svg'} alt='square btn' className='item' onClick={(e) => this.stop(e)}/>
+              </div> :
+
+              <div className='row'>
+                <img src={'/img/pause.svg'} alt='pause btn' className='item' onClick={(e) => this.pause(e)}/>
+                <img src={'/img/square.svg'} alt='square btn' className='item' onClick={(e) => this.stop(e)}/>
+              </div>
+        }
       </section>
     )
   }

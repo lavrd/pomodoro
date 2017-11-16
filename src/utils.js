@@ -13,19 +13,19 @@ export const settings = {
   work: {
     min: 15,
     max: 60,
-    default: 25,
+    value: 25,
     title: 'Work time'
   },
   short: {
     min: 1,
     max: 10,
-    default: 5,
+    value: 5,
     title: 'Short break'
   },
   long: {
     min: 5,
     max: 25,
-    default: 15,
+    value: 15,
     title: 'Long break'
   },
 };

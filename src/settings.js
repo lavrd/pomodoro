@@ -8,7 +8,7 @@ class Settings extends React.Component {
   constructor() {
     super();
 
-    this.state = {}
+    this.state = {settings: settings}
   }
 
   componentDidMount() {
@@ -16,30 +16,43 @@ class Settings extends React.Component {
     console.log('component did mount')
   }
 
-  change = (e) => {};
+  componentWillUnmount() {
+
+    console.log('component will unmount')
+  }
+
+  change = (e, id) => {
+
+    let settings = this.state.settings;
+    settings[id].value = e.target.value;
+
+    this.setState({settings: settings});
+  };
 
   render() {
 
     return (
-      <section>
-        <div className='container settings-header'>
+      <section className='hero'>
+        <div className='row'>
           <h1>Settings</h1>
-          <img src={'/img/save.svg'} className='btn-save' alt='save btn'
-               onClick={(e) => this.switchSettings(e)}/>
         </div>
 
-        <div className='container'>
+        <div className='row'>
           {
-            Object.keys(settings).map((id, index) => {
+            Object.keys(this.state.settings).map((id, index) => {
 
-              const setting = settings[id];
+              const setting = this.state.settings[id];
 
               return (
                 <div className='item' key={index}>
-                  <h5>{setting.title}</h5>
+                  <div className='row space-between'>
+                    <h5>{setting.title}</h5>
+                    <small>{setting.value}</small>
+                  </div>
+
                   <input type='range'
-                         min={setting.min} step='1' value={setting.default} max={setting.max}
-                         onChange={(e) => this.change(e)}/>
+                         min={setting.min} step='1' value={setting.value} max={setting.max}
+                         onChange={(e) => this.change(e, id)}/>
                 </div>
               )
             })

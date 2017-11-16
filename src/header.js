@@ -25,10 +25,13 @@ const Header = (props) => {
     <section>
       <div className='progress-bar'/>
 
-      <div className='container btn-settings'>
-        <img src={'/img/github.svg'} alt='github btn' onClick={() => console.log('github')}/>
-        <img src={'/img/bell.svg'} alt='bell btn' onClick={() => console.log('bell')}/>
+      <div className='column controls'>
         <img src={'/img/settings.svg'} alt='settings btn' onClick={(e) => this.switchSettings(e)}/>
+        <img src={'/img/bell.svg'} alt='bell btn' onClick={() => console.log('bell')}/>
+
+        <a href='https://github.com/spacelavr/pomodoro' target='_blank' rel='noopener noreferrer'>
+          <img src={'/img/github.svg'} alt='github btn'/>
+        </a>
       </div>
     </section>
   )

@@ -1,59 +1,90 @@
 body {
   background-color: #F4F4F4;
   color: #373737;
-
   font-family: 'Roboto', sans-serif;
   font-size: 24px;
 }
 
-.container {
+.row {
+  display: -webkit-flex;
   display: flex;
+  -webkit-flex-direction: row;
   flex-direction: row;
+  -webkit-justify-content: center;
   justify-content: center;
+}
+
+.column {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-end;
+  align-items: flex-end;
+}
+
+.hero {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  right: 50%;
 }
 
 .item {
   margin: 0 25px 0 25px;
 }
 
-input[type='range'] {
+.space-between {
+  justify-content: space-between;
+}
+
+input[type=range] {
   width: 15em;
+  height: 3px;
+  -webkit-appearance: none;
+  background: #DCD0C0;
 }
 
-.settings-header {
-  margin: 150px 0 100px 0;
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 15px;
+  width: 15px;
+  border-radius: 15px;
+  background: #373737;
+  cursor: pointer;
 }
 
-.btn-save {
-  padding: 5px 0 0 25px;
-  height: 50px;
+small {
+  color: #DCD0C0;
 }
 
 h5, h1 {
   margin: 0;
 }
 
+h1 {
+  margin-bottom: 100px;
+}
+
 img {
   height: 25px;
-
   cursor: pointer;
 }
 
 .display {
-  margin-top: 150px;
-
   font-size: 7rem;
 }
 
 .progress-bar {
   background-color: #DCD0C0;
-
   width: 40%;
   height: 3px;
 }
 
-.btn-settings {
-  justify-content: flex-end;
-
+.controls {
   margin: 22px 25px 0 0;
+}
+
+.controls img {
+  margin-bottom: 15px;
 }
