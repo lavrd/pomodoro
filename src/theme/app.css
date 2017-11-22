@@ -75,7 +75,7 @@ img {
   font-size: 7rem;
 }
 
-.progress-bar {
+.progress {
   background-color: #DCD0C0;
   width: 40%;
   height: 3px;
@@ -87,4 +87,8 @@ img {
 
 .controls img {
   margin-bottom: 15px;
+}
+
+.colon {
+  padding-bottom: 25px;
 }

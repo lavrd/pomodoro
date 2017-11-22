@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import {statesApp} from './utils';
+import {statesApp} from '../utils';
 
 
 const Header = (props) => {
@@ -23,13 +23,18 @@ const Header = (props) => {
 
   return (
     <section>
-      <div className='progress-bar'/>
+      <div className='progress'/>
 
       <div className='column controls'>
-        <img src={'/img/settings.svg'} alt='settings btn' onClick={(e) => this.switchSettings(e)}/>
+        {
+          props.state === statesApp.timer
+            ? <img src={'/img/sliders.svg'} alt='go to settings btn' onClick={(e) => this.switchSettings(e)}/>
+            : <img src={'/img/clock.svg'} alt='go to timer btn' onClick={(e) => this.switchSettings(e)}/>
+        }
+
         <img src={'/img/bell.svg'} alt='bell btn' onClick={() => console.log('bell')}/>
 
-        <a href='https://github.com/spacelavr/pomodoro' target='_blank' rel='noopener noreferrer'>
+        <a href='//github.com/spacelavr/pomodoro' target='_blank' rel='noopener noreferrer'>
           <img src={'/img/github.svg'} alt='github btn'/>
         </a>
       </div>

@@ -3,7 +3,7 @@ import React from 'react';
 import Header from './header';
 import Timer from './timer';
 import Settings from './settings';
-import {statesApp} from './utils'
+import {statesApp} from '../utils';
 
 
 class App extends React.Component {
@@ -18,7 +18,6 @@ class App extends React.Component {
 
     this.setState({state: state})
   };
-
 
   render() {
 
