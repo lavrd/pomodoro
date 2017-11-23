@@ -92,3 +92,11 @@ img {
 .colon {
   padding-bottom: 25px;
 }
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  margin: 0 0 50px 0;
+}

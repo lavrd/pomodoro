@@ -22,7 +22,7 @@ const Header = (props) => {
   };
 
   return (
-    <section>
+    <header>
       <div className='progress'/>
 
       <div className='column controls'>
@@ -38,7 +38,7 @@ const Header = (props) => {
           <img src={'/img/github.svg'} alt='github btn'/>
         </a>
       </div>
-    </section>
+    </header>
   )
 };
 
