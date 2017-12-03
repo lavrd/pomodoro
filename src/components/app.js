@@ -4,7 +4,6 @@ import Header from './header';
 import Timer from './timer';
 import Settings from './settings';
 import {statesApp} from '../utils';
-import Footer from './footer';
 
 
 class App extends React.Component {
@@ -29,8 +28,6 @@ class App extends React.Component {
         {
           this.state.state === statesApp.timer ? <Timer/> : <Settings/>
         }
-
-        <Footer/>
       </section>
     )
   }

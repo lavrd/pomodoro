@@ -10,9 +10,9 @@ export const statesTimer = {
 };
 
 export const statesParts = {
-  work: 'work',
-  short: 'short',
-  long: 'long'
+  work: 'Work',
+  short: 'Short rest',
+  long: 'Long rest'
 };
 
 export const defaultSettings = () => ({
@@ -21,19 +21,19 @@ export const defaultSettings = () => ({
       min: 15,
       max: 45,
       value: 1499,
-      title: 'Work time'
+      title: 'work'
     },
     short: {
       min: 1,
       max: 10,
       value: 299,
-      title: 'Short break'
+      title: 'short'
     },
     long: {
       min: 5,
       max: 25,
       value: 899,
-      title: 'Long break'
+      title: 'long'
     }
   },
   sound: true

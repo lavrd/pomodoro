@@ -25,7 +25,6 @@ class Timer extends React.Component {
 
     let settings = getSettings();
     settings = settings ? settings : defaultSettings();
-
     let min = settings.timer.work.value;
     min = min < 10 ? `0${min}` : min;
 
@@ -35,6 +34,10 @@ class Timer extends React.Component {
       min: Math.round(min / 60),
       distance: settings.timer.work.value
     })
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.state.interval)
   }
 
   start = (e) => {
@@ -112,7 +115,8 @@ class Timer extends React.Component {
       min: Math.round(prev.settings.timer.work.value / 60),
       sec: '00',
       distance: prev.settings.timer.work.value,
-      state: statesTimer.stopped
+      state: statesTimer.stopped,
+      part: statesParts.work
     }))
   };
 
@@ -130,7 +134,11 @@ class Timer extends React.Component {
     return (
       <section className='hero'>
         <div className='row'>
-          <span className='display'>{this.state.min}<span className='colon'>:</span>{this.state.sec}</span>
+          <small>{this.state.part}</small>
+        </div>
+
+        <div className='row'>
+          <span className='display'>{this.state.min}:{this.state.sec}</span>
         </div>
 
         <div className='row'>
