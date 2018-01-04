@@ -1,7 +1,5 @@
 import React from 'react';
-
 import {defaultSettings, getSettings, statesParts, statesTimer} from '../utils';
-
 
 class Timer extends React.Component {
 

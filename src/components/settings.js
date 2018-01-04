@@ -1,7 +1,5 @@
 import React from 'react'
-
 import {defaultSettings, getSettings, setSettings} from "../utils"
-
 
 class Settings extends React.Component {
 

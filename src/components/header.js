@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import {statesApp} from '../utils';
-
 
 const Header = (props) => {
 
