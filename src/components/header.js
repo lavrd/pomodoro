@@ -24,12 +24,12 @@ const Header = (props) => {
       <div className='column controls'>
         {
           props.state === statesApp.timer
-            ? <img src={'/img/sliders.svg'} alt='go to settings btn' onClick={(e) => this.switchSettings(e)}/>
-            : <img src={'/img/clock.svg'} alt='go to timer btn' onClick={(e) => this.switchSettings(e)}/>
+            ? <img src={'%PUBLIC_URL%/img/sliders.svg'} alt='go to settings btn' onClick={(e) => this.switchSettings(e)}/>
+            : <img src={'%PUBLIC_URL%/img/clock.svg'} alt='go to timer btn' onClick={(e) => this.switchSettings(e)}/>
         }
 
         <a href='//github.com/spacelavr/pomodoro' target='_blank' rel='noopener noreferrer'>
-          <img src={'/img/github.svg'} alt='github btn'/>
+          <img src={'%PUBLIC_URL%/img/github.svg'} alt='github btn'/>
         </a>
       </div>
     </header>

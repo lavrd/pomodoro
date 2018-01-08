@@ -77,7 +77,7 @@ class Settings extends React.Component {
         </div>
 
         <div className='row' style={{marginTop: '75px'}}>
-          <img onClick={(e) => this.reset(e)} src={'/img/rotate-ccw.svg'}
+          <img onClick={(e) => this.reset(e)} src={'%PUBLIC_URL%/img/rotate-ccw.svg'}
                alt='reset settings btn'/>
         </div>
       </section>
