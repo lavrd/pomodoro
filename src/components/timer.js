@@ -143,22 +143,22 @@ class Timer extends React.Component {
           {
             this.state.state === statesTimer.stopped ?
               <div className='row'>
-                <img src={'%PUBLIC_URL%/img/play.svg'} alt='play btn' className='item' onClick={(e) => this.start(e)}/>
+                <img src={'img/play.svg'} alt='play btn' className='item' onClick={(e) => this.start(e)}/>
               </div> :
 
               this.state.state === statesTimer.paused ?
                 <div className='row'>
-                  <img src={'%PUBLIC_URL%/img/skip-forward.svg'} alt='skip part btn' className='item'
+                  <img src={'img/skip-forward.svg'} alt='skip part btn' className='item'
                        onClick={(e) => this.skip(e)}/>
-                  <img src={'%PUBLIC_URL%/img/play.svg'} alt='play btn' className='item' onClick={(e) => this.start(e)}/>
-                  <img src={'%PUBLIC_URL%/img/square.svg'} alt='square btn' className='item' onClick={(e) => this.stop(e)}/>
+                  <img src={'img/play.svg'} alt='play btn' className='item' onClick={(e) => this.start(e)}/>
+                  <img src={'img/square.svg'} alt='square btn' className='item' onClick={(e) => this.stop(e)}/>
                 </div> :
 
                 <div className='row'>
-                  <img src={'%PUBLIC_URL%/img/skip-forward.svg'} alt='skip part btn' className='item'
+                  <img src={'img/skip-forward.svg'} alt='skip part btn' className='item'
                        onClick={(e) => this.skip(e)}/>
-                  <img src={'%PUBLIC_URL%/img/pause.svg'} alt='pause btn' className='item' onClick={(e) => this.pause(e)}/>
-                  <img src={'%PUBLIC_URL%/img/square.svg'} alt='square btn' className='item' onClick={(e) => this.stop(e)}/>
+                  <img src={'img/pause.svg'} alt='pause btn' className='item' onClick={(e) => this.pause(e)}/>
+                  <img src={'img/square.svg'} alt='square btn' className='item' onClick={(e) => this.stop(e)}/>
                 </div>
           }
         </div>
