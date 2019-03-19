@@ -28,7 +28,7 @@ const Header = (props) => {
             : <img src={'img/clock.svg'} alt='go to timer btn' onClick={(e) => this.switchSettings(e)}/>
         }
 
-        <a href='//github.com/spacelavr/pomodoro' target='_blank' rel='noopener noreferrer'>
+        <a href='//github.com/xthelavr/pomodoro' target='_blank' rel='noopener noreferrer'>
           <img src={'img/github.svg'} alt='github btn'/>
         </a>
       </div>

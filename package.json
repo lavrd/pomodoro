@@ -2,7 +2,7 @@
   "name": "pomodoro",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://spacelavr.github.io/pomodoro/",
+  "homepage": "https://xthelavr.github.io/pomodoro/",
   "dependencies": {
     "prop-types": "^15.6.0",
     "react": "^16.1.1",
